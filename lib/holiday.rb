@@ -179,7 +179,6 @@ def all_holidays_with_bbq(holiday_hash)
   item = "BBQ"
   bbq_holidays = Array.new
   holiday_hash.select do |season, holiday|
-
     if season != item
       holiday.collect do |holiday, supply|
         if holiday != item
@@ -188,13 +187,10 @@ def all_holidays_with_bbq(holiday_hash)
               bbq_holidays << holiday
             end
           end
-        else
         end
       end
-      else
       end
     end
-    puts bbq_holidays
     return bbq_holidays
   end
 
